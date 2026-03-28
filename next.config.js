@@ -12,7 +12,7 @@ const nextConfig = (phase) => {
         env: {
             BASE_URL: isDev
                 ? "http://localhost:3000"
-                : "https://blog.jangjong.in",
+                : "https://blog-hj-eng.vercel.app",
         },
         turbopack: {
             root: __dirname,

@@ -1,4 +1,4 @@
-# Jang Jong-in's Blog
+# Cho Hae-ji's Blog
 
 > 처음 개발 시작했을 때 Jekyll(Ruby)로 블로그를 만들어서 GitHub Pages로 호스팅했었는데, 만들기만 하고 한참 방치해뒀던 기억이 납니다.  
 > Next.js로 다시 만들어 보려고 해요. 3년 만에 새로 만드는 블로그 제작기... 이번엔 꾸준히 운영할 수 있을까요?
@@ -63,9 +63,9 @@ JSON 기반이라 읽기 쉽고, 기존 메타 태그 방식보다 유지 보수
             url: `${process.env.BASE_URL}/posts/${encodedSlug}`,
             author: {
                 "@type": "Person",
-                name: "Jang Jong-in",
-                alternateName: "장종인",
-                url: "https://jangjong.in",
+                name: "Cho Hae-ji",
+                alternateName: "조해지",
+                url: "https://blog-hj-eng.vercel.app",
             },
         })
     }}

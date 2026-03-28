@@ -5,7 +5,7 @@
 ## 환경
 
 - 패키지 매니저와 실행 런타임은 `bun`을 사용합니다.
-- 로컬 Node.js 버전은 [`.nvmrc`](/Users/joey/Henge/github/repo/blog.jangjong.in/.nvmrc) 기준으로 맞춥니다.
+- 로컬 Node.js 버전은 [`.nvmrc`](.nvmrc) 기준으로 맞춥니다.
 - 의존성 설치:
 
 ```bash
@@ -17,7 +17,6 @@ bun install
 - `bun run dev`
   - Next.js 개발 서버를 실행합니다.
 - `bun run validate`
-  - `@bellmanjang/eslint-fsd-next-app` 패키지의 `test 및 build`
   - 앱 전체 `eslint`
   - 앱 전체 `biome`
 - `bun run test`

@@ -1,5 +1,5 @@
 {
-  "name": "blog.jangjong.in",
+  "name": "blog-hj-eng",
   "private": true,
   "version": "1.0.3",
   "type": "module",
@@ -8,14 +8,12 @@
     "build": "next build",
     "postbuild": "tsx scripts/build-search-index.ts",
     "start": "next start",
-    "validate": "pnpm lint:eslint:test && pnpm lint:eslint:build && pnpm lint",
+    "validate": "pnpm lint:eslint && pnpm lint",
     "test": "node --test ./src",
     "test:e2e": "pnpm build && playwright test",
     "test:all": "pnpm validate && pnpm test && pnpm test:e2e",
     "lint": "pnpm lint:eslint && pnpm lint:biome",
     "lint:eslint": "eslint .",
-    "lint:eslint:test": "pnpm --filter @bellmanjang/eslint-fsd-next-app test",
-    "lint:eslint:build": "pnpm --filter @bellmanjang/eslint-fsd-next-app build",
     "lint:biome": "biome check --diagnostic-level=error",
     "lint:biome:fix": "biome check --write --diagnostic-level=error"
   },

@@ -56,8 +56,8 @@ const jetbrains_mono = localFont({
 export const metadata: Metadata = {
     metadataBase: process.env.BASE_URL,
     title: {
-        default: "Jang Jong-in's Blog",
-        template: "%s | Jang Jong-in's Blog",
+        default: "Cho Hae-ji's Blog",
+        template: "%s | Cho Hae-ji's Blog",
     },
     description: "느즈막이 시작한 개발자 블로그",
     icons: {
@@ -73,10 +73,10 @@ export const metadata: Metadata = {
         ],
     },
     openGraph: {
-        title: "Jang Jong-in's Blog",
+        title: "Cho Hae-ji's Blog",
         description: "느즈막이 시작한 개발자 블로그",
         url: process.env.BASE_URL,
-        siteName: "Jang Jong-in's Blog",
+        siteName: "Cho Hae-ji's Blog",
         locale: "ko_KR",
         type: "website",
     },

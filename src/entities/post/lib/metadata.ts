@@ -32,9 +32,9 @@ export function buildPostJsonLd(post: Post, baseUrl: string) {
         url: postUrl,
         author: {
             "@type": "Person",
-            name: "Jang Jong-in",
-            alternateName: "장종인",
-            url: "https://jangjong.in",
+            name: "Cho Hae-ji",
+            alternateName: "조해지",
+            url: "https://blog-hj-eng.vercel.app",
         },
     });
 }

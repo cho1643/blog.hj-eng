@@ -152,7 +152,7 @@ import { TocSidebar } from "@/features/post-toc/ui/TocSidebar";
 문제는 이런 규칙을 사람이 계속 의식하며 지키기엔 생각보다 번거롭다는 점이었습니다.  
 특히 IDE 자동 import는 대체로 “지금 resolve만 되면 되는 경로”를 제안하지, “지금 프로젝트가 원하는 FSD 스타일”까지 알아서 맞춰주진 않으니까요.
 
-그래서 결국 <a href="https://github.com/bellmanjang/blog.jangjong.in/tree/main/packages/eslint-fsd-next-app" target="_blank">eslint-fsd-next-app</a>를 직접 만들어서 적용했습니다.
+그래서 결국 <a href="https://github.com/cho1643/blog-hj-eng/tree/main/packages/eslint-fsd-next-app" target="_blank">eslint-fsd-next-app</a>를 직접 만들어서 적용했습니다.
 
 다만 이 플러그인이 FSD 전체를 전부 담당하는 건 아닙니다.  
 같은 layer의 다른 slice 간 import 금지나 boundary 간 의존 방향 제약 같은 부분은 `eslint-plugin-boundaries`로 처리하고,  

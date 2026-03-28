@@ -164,7 +164,7 @@ export async function GET(
                             fontFamily: "PretendardExtraBold",
                         }}
                     >
-                        blog.jangjong.in
+                        blog-hj-eng.vercel.app
                     </span>
                 </div>
 

@@ -16,19 +16,19 @@ const basePost: Post = {
 
 test("buildPostMetadataUrls percent-encodes slugs for page and og paths", () => {
     assert.deepEqual(
-        buildPostMetadataUrls("https://blog.jangjong.in", basePost.slug),
+        buildPostMetadataUrls("https://blog-hj-eng.vercel.app", basePost.slug),
         {
             postUrl:
-                "https://blog.jangjong.in/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
+                "https://blog-hj-eng.vercel.app/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
             ogImageUrl:
-                "https://blog.jangjong.in/og/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
+                "https://blog-hj-eng.vercel.app/og/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
         },
     );
 });
 
 test("buildPostJsonLd serializes iso timestamps and canonical urls", () => {
     const jsonLd = JSON.parse(
-        buildPostJsonLd(basePost, "https://blog.jangjong.in"),
+        buildPostJsonLd(basePost, "https://blog-hj-eng.vercel.app"),
     ) as Record<string, unknown>;
 
     assert.equal(jsonLd["@context"], "https://schema.org");
@@ -39,16 +39,16 @@ test("buildPostJsonLd serializes iso timestamps and canonical urls", () => {
     assert.equal(jsonLd.dateModified, "2026-03-09T01:30:00.000Z");
     assert.equal(
         jsonLd.image,
-        "https://blog.jangjong.in/og/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
+        "https://blog-hj-eng.vercel.app/og/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
     );
     assert.equal(
         jsonLd.url,
-        "https://blog.jangjong.in/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
+        "https://blog-hj-eng.vercel.app/posts/Next.js%EC%97%90%20FSD%20%EC%A0%81%EC%9A%A9",
     );
     assert.deepEqual(jsonLd.author, {
         "@type": "Person",
-        name: "Jang Jong-in",
-        alternateName: "장종인",
-        url: "https://jangjong.in",
+        name: "Cho Hae-ji",
+        alternateName: "조해지",
+        url: "https://blog-hj-eng.vercel.app",
     });
 });

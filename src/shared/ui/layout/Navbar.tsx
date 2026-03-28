@@ -12,10 +12,10 @@ const navItems: { [path: string]: NavItem } = {
     "/posts": {
         name: "Posts",
     },
-    "https://jangjong.in": {
+    "https://blog-hj-eng.vercel.app": {
         name: "Portfolio",
     },
-    "https://github.com/bellmanjang/blog.jangjong.in": {
+    "https://github.com/cho1643/blog-hj-eng": {
         name: "Source",
     },
 };
