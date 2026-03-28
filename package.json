@@ -3,24 +3,19 @@
   "private": true,
   "version": "1.0.3",
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "dev": "bun --bun next dev",
-    "build": "bun --bun next build",
-    "postbuild": "bun scripts/build-search-index.ts",
-    "start": "bun --bun next start",
-
-    "validate": "bun run lint:eslint:test && bun run lint:eslint:build && bun run lint",
-    "test": "bun test ./src",
-    "test:e2e": "bun run build && playwright test",
-    "test:all": "bun run validate && bun run test && bun run test:e2e",
-
-    "lint": "bun run lint:eslint && bun run lint:biome",
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "tsx scripts/build-search-index.ts",
+    "start": "next start",
+    "validate": "pnpm lint:eslint:test && pnpm lint:eslint:build && pnpm lint",
+    "test": "node --test ./src",
+    "test:e2e": "pnpm build && playwright test",
+    "test:all": "pnpm validate && pnpm test && pnpm test:e2e",
+    "lint": "pnpm lint:eslint && pnpm lint:biome",
     "lint:eslint": "eslint .",
-    "lint:eslint:test": "bun run --filter @bellmanjang/eslint-fsd-next-app test",
-    "lint:eslint:build": "bun run --filter @bellmanjang/eslint-fsd-next-app build",
+    "lint:eslint:test": "pnpm --filter @bellmanjang/eslint-fsd-next-app test",
+    "lint:eslint:build": "pnpm --filter @bellmanjang/eslint-fsd-next-app build",
     "lint:biome": "biome check --diagnostic-level=error",
     "lint:biome:fix": "biome check --write --diagnostic-level=error"
   },
@@ -49,6 +44,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "sass": "^1.97.3",
+    "styled-jsx": "^5.1.1",
     "tailwind-merge": "^3.5.0",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.1.0",
@@ -56,8 +52,8 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@bellmanjang/eslint-fsd-next-app": "workspace:*",
     "@biomejs/biome": "^2.3.14",
+    "@playwright/test": "^1.54.2",
     "@radix-ui/themes": "^3.3.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/estree": "^1.0.8",
@@ -67,7 +63,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
-    "@playwright/test": "^1.54.2",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.56.1",
     "@vercel/analytics": "^1.6.1",
@@ -77,11 +72,12 @@
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-boundaries": "^5.4.0",
     "tailwindcss": "^4.1.18",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   },
   "engines": {
     "node": ">=20.11.0",
-    "bun": ">=1.3.10"
+    "pnpm": ">=10.0.0"
   },
-  "packageManager": "bun@1.3.10"
+  "packageManager": "pnpm@10.33.0"
 }

@@ -23,7 +23,7 @@ export default defineConfig({
         },
     ],
     webServer: {
-        command: `bun run start -- --hostname 127.0.0.1 --port ${PORT}`,
+        command: `yarn start -- --hostname 127.0.0.1 --port ${PORT}`,
         url: baseURL,
         reuseExistingServer: !process.env.CI,
         timeout: 120_000,
