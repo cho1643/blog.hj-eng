@@ -8,10 +8,16 @@ export const ResponsiveLogo = () => {
                 <span className="ml-1 text-sm text-[var(--gray-11)]">
                     (HJ ENG)
                 </span>
+                <div className="text-sm text-[var(--gray-11)] mt-1">
+                    공기순환기 설치 및 유지관리
+                </div>
             </div>
 
             <div className="block md:hidden">
                 <span className="font-extrabold text-base">HJ ENG</span>
+                <div className="text-sm text-[var(--gray-11)] mt-1">
+                    공기순환기 설치 및 유지관리
+                </div>
             </div>
         </>
     );

@@ -2,7 +2,7 @@
 
 .toc {
     top: var(--toc-top) !important;
-    right: var(--toc-mx) !important;
+    left: var(--toc-mx) !important;
     max-width: calc((100vw - min(var(--layout-max-w),100vw)) / 2 - var(--toc-mx)) !important;
     max-height: calc(100dvh - var(--toc-top) * 2) !important;
 }

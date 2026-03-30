@@ -10,13 +10,13 @@ type NavItem = {
 
 const navItems: { [path: string]: NavItem } = {
     "/posts": {
-        name: "Posts",
+        name: "서비스",
     },
     "https://blog-hj-eng.vercel.app": {
-        name: "Portfolio",
+        name: "작업사례",
     },
     "https://github.com/cho1643/blog-hj-eng": {
-        name: "Source",
+        name: "견적문의",
     },
 };
 

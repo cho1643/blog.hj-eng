@@ -46,7 +46,7 @@ export function TocRoot({ tocRoots }: { tocRoots: HeadingNode[] }) {
         <ScrollArea
             className={cx(
                 styles.toc,
-                "!w-fit !h-auto !fixed right-0 z-10 min-w-min bg-[var(--color-background)] py-1 shadow-[var(--shadow-4)] xl:min-w-0",
+                "!w-fit !h-auto !fixed left-0 z-10 min-w-min bg-[var(--color-background)] py-1 shadow-[var(--shadow-4)] xl:min-w-0",
             )}
             scrollbars="vertical"
             type="auto"
